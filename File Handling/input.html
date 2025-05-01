@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cari & Sensor Kata di File</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Link Bootstrap 5.3.5 CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Custom style (opsional) -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-light">
+
+<div class="container mt-5">
+    <div class="card shadow-sm">
+        <div class="card-body">
+            <h2 class="card-title text-center mb-4">Cari & Sensor Kata di File</h2>
+            
+            <form method="post" action="cari.php" enctype="multipart/form-data">
+                <div class="mb-3">
+                    <label for="kata" class="form-label">Kata Kunci</label>
+                    <input type="text" class="form-control" id="kata" name="kata" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="file" class="form-label">Pilih File</label>
+                    <input type="file" class="form-control" id="file" name="file" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="operasi" class="form-label">Operasi</label>
+                    <select class="form-select" id="operasi" name="operasi">
+                        <option value="show">Tampilkan</option>
+                        <option value="redact">Sensor (***)</option>
+                    </select>
+                </div>
+
+                <div class="mb-3">
+                    <label for="tipe" class="form-label">Tipe Keluaran</label>
+                    <select class="form-select" id="tipe" name="tipe">
+                        <option value="O">Timpa File Asli</option>
+                        <option value="N">Simpan Sebagai File Baru</option>
+                    </select>
+                </div>
+
+                <div class="text-center">
+                    <button type="submit" name="proses" class="btn btn-primary w-100">Proses</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
